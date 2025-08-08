@@ -1,0 +1,15 @@
+[project]
+name = "wkill"
+version = "0.1.0"
+description = "Sway kill window"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "i3ipc>=2.2.1",
+]
+
+[tool.setuptools]
+py-modules = ["wkill"]
+
+[project.scripts]
+wkill = "wkill:main"
