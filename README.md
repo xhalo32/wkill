@@ -35,6 +35,30 @@ See `wkill --help` for options.
 
 1. Rebuild your configuration, reload sway and try it out!
 
+## Development
+
+This repository should work with [`nix-direnv`](https://github.com/nix-community/nix-direnv):
+
+```sh
+direnv allow
+nix-direnv-reload
+```
+
+Optionally, run `nix-shell` manually:
+
+```sh
+nix-shell
+```
+
+The shell has `uv` and required python dependencies installed.
+You can now run e.g. `python wkill.py` to develop without building with nix.
+
+To build the package with nix manually, use
+
+```sh
+nix-build
+```
+
 ## Alternatives
 
 If you don't want to use `wkill`, you can try these alternatives:
