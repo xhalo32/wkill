@@ -19,7 +19,3 @@ If you don't want to use `wkill`, you can try these alternatives:
     ```
     bindsym Mod4+Ctrl+Shift+q exec kill -9 $(swaymsg -t get_tree | jq '.. | select(.focused? == true) | .pid')
     ```
-
-## TODO
-
-- Version which simply kills focused window
