@@ -11,7 +11,10 @@ rec {
   default = packages.wkill;
 
   shell = pkgs.mkShellNoCC {
-    buildInputs = [ pkgs.uv ];
+    buildInputs = [
+      pkgs.uv
+      pkgs.slurp
+    ];
     inputsFrom = [ packages.wkill ];
   };
 }

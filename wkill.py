@@ -49,6 +49,7 @@ def window_contains_point(node: Con, x: int, y: int, verbose: bool) -> bool:
         rect.x <= x < rect.x + rect.width and
         rect.y <= y < rect.y + rect.height and
         node.type in ('con', 'floating_con') and
+        node.ipc_data.get('visible') and
         (node.app_id or node.name)
     )
 
